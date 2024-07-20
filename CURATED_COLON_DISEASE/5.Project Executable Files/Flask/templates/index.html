@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColonPredict Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">ColonPredict</div>
+        <div class="nav-items">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="{{ url_for('predict') }}">Predictions</a> <!-- Assuming 'predictor' is the endpoint for details.html -->
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="column-left">
+                <h1>ColoPredict</h1>
+                <p>Revolutionising Colon prediction through transfer learning mastery.</p>
+                <a href="{{ url_for('predict') }}"><button>GET STARTED</button></a>
+            </div>
+            <div class="column-right">
+                <img src="{{ url_for('static', filename='images/colon-awarness.jpg') }}" alt="Customer Support" class="hero-image">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColonPredict Predict</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">ColonPredict</div>
+        <div class="nav-items">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('predict') }}">Predictions</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+    </nav>
+    <section class="hero details-background">
+        <div class="hero-container">
+            <div class="column-left">
+                <h1>COLON DISEASE PREDICTION</h1>
+                <p>Predicting colon diseases using transfer learning typically involves leveraging pre-trained deep learning models on large datasets for image classification tasks.</p>
+                <form action="{{ url_for('result') }}" method="post" enctype="multipart/form-data" class="form">
+                    <input type="file" name="image" id="upload_file" accept=".png, .jpg, .jpeg" onchange="loadFile(event)">
+                    <input type="submit" value="Predict" id="submitBtn" class="form-submit-button">
+                    <p><img id="out" width="200"></p>
+                    <script>
+                        var loadFile = function(event) {
+                            var image = document.getElementById('out');
+                            image.src = URL.createObjectURL(event.target.files[0]);
+                        };
+                    </script>
+                </form>
+                <div class="d-flex flex-row ">
+                     <a href="{{ url_for('index') }}"><button class="back-button">Back</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

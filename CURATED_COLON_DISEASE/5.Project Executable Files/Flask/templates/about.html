@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColonPredict - About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">ColonPredict</div>
+        <div class="nav-items">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('predict') }}">Predictions</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+    </nav>
+    <section class="hero about-background">
+        <div class="hero-container">
+            <div class="column-left">
+                <h1>About ColonPredict</h1>
+                <p>Welcome to ColonPredict, your trusted partner in colon health detection using advanced deep learning technology.</p>
+                <p>Our Mission</p>
+                <p>At ColonPredict, our mission is to harness the power of artificial intelligence to provide accessible, efficient, and accurate colon health assessments. We aim to support both individuals and healthcare professionals in the early detection and diagnosis of colon diseases, helping to improve quality of life.</p>
+                <p>What We Do</p>
+                <p>ColonPredict specializes in detecting colon diseases through image analysis. Our platform uses a state-of-the-art deep learning model to differentiate between normal colon and colon with ulcer, polyps, and related diseases, offering a quick and reliable assessment tool.</p>
+            </div>
+            <div class="column-right">
+                <img src="{{ url_for('static', filename='images/about_background.jpg') }}" alt="Customer Support" class="hero-image">
+            </div>
+            <div class="d-flex flex-row column-right">
+                <a href="{{ url_for('predict') }}"><button class="next-button">Next</button></a>
+                 <a href="{{ url_for('index') }}"><button class="back-button">Back</button></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

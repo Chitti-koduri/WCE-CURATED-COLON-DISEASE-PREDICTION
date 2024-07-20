@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColonPredict Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .column-center {
+            text-align: center; /* Center the content */
+            color: #fff; /* White text color */
+        }
+        .btn1 {
+            background-color: #fff; /* White background */
+            color: #089CB0; /* Blue text */
+            border: 1px solid #089CB0; /* Blue border */
+            padding: 1rem 3rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            margin-top: 2rem; /* Add space below the button */
+        }
+        .btn1:hover {
+            background-color: #089CB0; /* Blue background on hover */
+            color: #fff; /* White text on hover */
+        }
+        .back-button {
+            margin-top: 2rem; /* Add space below the back button */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">ColonPredict</div>
+        <div class="nav-items">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('predict') }}">Predictions</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="column-center">
+                <h1>RESULTS</h1>
+                <p>Upon examining and evaluating the images, we have concluded the following:</p>
+                <p style="margin-bottom: 2rem;">{{ result }}</p> <!-- Add bottom margin to the result paragraph -->
+                <p>For further further queries <a href="{{ url_for('contact') }}">contact us</p>
+                <a href="https://www.medtronic.com/in-en/patients/treatments-therapies/colon-disease/more-information.html">
+                    <button class="btn1">BOOK APPOINTMENT NOW</button>
+                </a>
+                <!-- Back button -->
+                <a href="{{ url_for('predict') }}"><button class="back-button">Back</button></a> <!-- Assuming 'predictor' is the endpoint for details.html -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

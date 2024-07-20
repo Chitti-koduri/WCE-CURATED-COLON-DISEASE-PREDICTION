@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColonPredict - Contact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">ColonPredict</div>
+        <div class="nav-items">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('predict') }}">Predictions</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+    </nav>
+    <section class="hero contact-background">
+        <div class="hero-container">
+            <div class="column-left">
+                <h1>Contact Us</h1>
+                <p>We value your feedback and are here to assist you with any questions or concerns. Feel free to reach out to us through our Contact Page.</p>
+                <p>Email: colonpredict@team.com</p>
+                <p>Phone: +91-9845xxxxxx</p>
+            </div>
+            <div class="column-right">
+                <img src="{{ url_for('static', filename='images/customer support.jpg') }}" alt="Customer Support" class="hero-image">
+            </div>
+            <div class="d-flex flex-row column-right">
+                 <a href="{{ url_for('index') }}"><button class="back-button">Back</button></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
